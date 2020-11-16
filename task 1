@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:blue>
+    <h1>Dr. Norman Borlaug</h1>
+    <p> The man who saved a billion lives </p>
+</body>
+<body>
+    <img src="master.jpg">
+    <p>Write a tribute of someone you admire and publish as a web page. This project will involve working with adding image, links, lists and paragraphs. This project will require knowledge of HTML to create. However, you can use a bit of CSS to make the project look better.</p>
+</body>
+</html>
