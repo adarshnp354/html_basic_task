@@ -1,36 +1,107 @@
 <!DOCTYPE html>
 <html>
-<frameset col="35%">
-    <frame name="JS Documentation" \>
-
-    </frame>
-</frameset>
-
+<head>
+<style>
+    * {box-sizing: border-box}
+    body {font-family: "Lato", sans-serif;}
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+.tab button:hover {
+  background-color: #ddd;
+}
+.tab button.active {
+  background-color: #ccc;
+}
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+</style>
+</head>
 <body>
-    <h1 style="font-family: 'Times New Roman', Times, serif;" style="text-align: right"> JS Documentation </h1>
     <div class="tab">
-        <button class="tablinks" onclick="openOption(event, 'Introduction')">Introduction</button>
-        <button class="tablinks" onclick="openOption(event, 'What you should already know')">What you should already know</button>
-        <button class="tablinks" onclick="openOption(event, 'JavaScript and Java')">JavaScript and Java</button>
-        <button class="tablinks" onclick="openOption(event, 'Hello World')">Hello World</button>
+        <button class="tablinks" onclick="openTab(event,'JS Documentation')">JS Documentation</button>
+        <button class="tablinks" onclick="openTab(event,'Introduction')">Introduction</button>
+        <button class="tablinks" onclick="openTab(event,'What you should already know')">What you should already know</button>
+        <button class="tablinks" onclick="openTab(event,'JavaScript and Java')">JavaScript and Java</button>
+        <button class="tablinks" onclick="openTab(event,'Hello World')">Hello World</button>
+        <button class="tablinks" onclick="openTab(event,'Variables')">Variables</button>
+        <button class="tablinks" onclick="openTab(event,'Declaring Variables')">Declaring Variables</button>
+        <button class="tablinks" onclick="openTab(event,'Variable Scope')">Variable Scope</button>
     </div>
-
+    <div id=JS Documentation class="tabcontent">
+        <h3>Welcome</h3>
+        <p>Welcome to JS Documentation</p>
+    </div>
     <div id="Introduction" class="tabcontent">
         <h3>Introduction</h3>
-        <p>This is the Introduction.</p>
+        <p>This is Introduction</p>
     </div>
-
     <div id="What you should already know" class="tabcontent">
         <h3>What you should already know</h3>
-        <p>What you should already know here.</p>
+        <p>This is What you should already know</p>
     </div>
-
     <div id="JavaScript and Java" class="tabcontent">
         <h3>JavaScript and Java</h3>
-        <p>JavaScript and Java appear here.</p>
+        <p>This is JavaScript and Java</p>
     </div>
-
     <div id="Hello World" class="tabcontent">
-        <h3>Hello World </h3>
-        <p>Hello World appear here.</p>
+        <h3>Hello World</h3>
+        <p>This is Hello World</p>
     </div>
+    <div id="Variables" class="tabcontent">
+        <h3>Variables</h3>
+        <p>This is Variables</p>
+    </div>
+    <div id="Declaring Variables" class="tabcontent">
+        <h3>Declaring Variables</h3>
+        <p>This is Declaring Variables</p>
+    </div>
+    <div id="Variable Scope" class="tabcontent">
+        <h3>Variable Scope</h3>
+        <p>This is Variable Scope</p>
+    </div>
+    <script>
+        function openTab(evt,tabName)
+        {
+            var i, tabcontent, tablinks;
+            tabcontent=document.getElementsByClassName("tablcontent");
+            for (i = 0; i < tabcontent.length; i++) 
+             {
+                tabcontent[i].style.display = "none";
+             }
+                tablinks = document.getElementsByClassName("tablinks");
+             for (i = 0; i < tablinks.length; i++)
+                  {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                  }
+                document.getElementById(tabName).style.display = "block";
+                 evt.currentTarget.className += " active";
+        }
+                    document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+</html>
