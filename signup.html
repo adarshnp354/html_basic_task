@@ -69,11 +69,19 @@
      document.getElementById('sp1').innerHTML="ENTER NAME";
      return false;
      }
+     else
+    {
+        return true;
+    }
      var b=document.getElementById("mail").value.trim();
      if(b=="")
      {
          document.getElementById("sp2").innerHTML="ENTER EMAIL";
          return false;
+     }
+     else
+     {
+            return true;
      }
      var c=document.getElementById('pass').value.trim();
      if(c=="")
@@ -81,11 +89,19 @@
          document.getElementById("sp3").innerHTML="ENTER PASSWORD";
          return false;
      }
+     else
+      {
+            return true;
+      }
      var d=document.getElementById("passw").value.trim();
      if(d=="")
      {
          document.getElementById("sp4").innerHTML="ENTER PASSWORD AGAIN";
          return false;
+     }
+     else
+     {
+           return true;
      }
      }
  </script>
