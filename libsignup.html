@@ -113,30 +113,35 @@
         function validate()
         {
             var a=document.getElementById("usr").value.trim();
-            var b=document.getElementById("mail").value.trim();
-            var c=document.getElementById("pass").value.trim();
-            var b=document.getElementById("passw").value.trim();
-            var b=document.getElementById("mob").value.trim();
-            if(a==""){
+            if(a===""){
                 document.getElementById("sp1").innerHTML="ENTER USERNAME";
                 return false;
+            } else {
+                return true;
             }
-            else if(b==""){
+            var b=document.getElementById("mail").value.trim();
+            if(b===""){
                 document.getElementById("sp2").innerHTML="ENTER YOUR EMAIL";
                 return false;
+            } else {
+                return true;
             }
-            
-            else if(c==""){
+            var c=document.getElementById("pass").value.trim();
+            if(c===""){
                 document.getElementById("sp3").innerHTML="ENTER YOUR PASSWORD";
                 return false;
+            } else {
+                return true;
             }
-           
-            else if(d==""){
+            var d=document.getElementById("passw").value.trim();
+            if(d===""){
                 document.getElementById("sp4").innerHTML="ENTER YOUR PASSWORD AGAIN";
                 return false;
+            } else {
+                return true;
             }
-    
-            else if(e==""){
+            var e=document.getElementById("mob").value.trim();
+            if(e===""){
                 document.getElementById("sp5").innerHTML="ENTER YOUR MOBILE NUM";
                 return false;
             } else {
