@@ -56,8 +56,8 @@
         div{
             margin-bottom: 20px;
         }
-        footer{
-            padding-left: 70px;
+        span{
+            color: brown;
         }
     </style>
 </head>
@@ -82,25 +82,67 @@
         </div>
         <div>
             <i class="fa fa-user" aria-hidden="true"></i>
-            <input type="text" placeholder="Enter your name">
+            <input type="text" id="usr" placeholder="Enter your name">
+            <span id="sp1"></span><br>
         </div>
         <div>
             <i class="fa fa-paper-plane" aria-hidden="true"></i>
-            <input type="email" id="mail" placeholder="Enter your emailS">
+            <input type="email" id="mail" placeholder="Enter your email">
+            <span id="sp2"></span><br>
         </div>
         <div>
             <i class="fa fa-lock" aria-hidden="true"></i>
-            <input type="password" placeholder="Enter your password">
+            <input type="password" id="pass" placeholder="Enter your password">
+            <span id="sp3"></span><br>
         </div>
         <div>
             <i class="fa fa-lock" aria-hidden="true"></i>
             <input type="password" id="passw" placeholder="Confirm password">
+            <span id="sp4"></span><br>
         </div>
         <div>
             <i class="fa fa-mobile-phone"></i>
-            <input type="text" placeholder="Enter your mob number">
+            <input type="text" id="mob" placeholder="Enter your mob number">
+            <span id="sp5"></span><br>
         </div>
         <div>
-            <input type="button" style="color: navy;" value="SIGN UP">
+            <input type="button" style="color: navy;" value="SIGN UP" onclick="validate()">
         </div>
     </form>
+    <script>
+        function validate()
+        {
+            var a=document.getElementById("usr").value.trim();
+            var b=document.getElementById("mail").value.trim();
+            var c=document.getElementById("pass").value.trim();
+            var b=document.getElementById("passw").value.trim();
+            var b=document.getElementById("mob").value.trim();
+            if(a==""){
+                document.getElementById("sp1").innerHTML="ENTER USERNAME";
+                return false;
+            }
+            else if(b==""){
+                document.getElementById("sp2").innerHTML="ENTER YOUR EMAIL";
+                return false;
+            }
+            
+            else if(c==""){
+                document.getElementById("sp3").innerHTML="ENTER YOUR PASSWORD";
+                return false;
+            }
+           
+            else if(d==""){
+                document.getElementById("sp4").innerHTML="ENTER YOUR PASSWORD AGAIN";
+                return false;
+            }
+    
+            else if(e==""){
+                document.getElementById("sp5").innerHTML="ENTER YOUR MOBILE NUM";
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</body>
+</html>
