@@ -38,6 +38,9 @@
             float: right;
             margin-right:30px;
         }
+        #c{
+            display: none;
+        }
         img{
             width:60px;
             border-radius: 50%;
@@ -59,7 +62,7 @@
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">CONTACTUS</a></li>
             <li><a href="#">LOGIN</a></li>
-            <li><input type="button" style="background-color: navy;" value="SIGNUP" onclick="validate()"></input></li>
+            <li><input type="button" style="background-color: navy;" value="SIGNUP"></input></li>
           </ul>
         </div>
       </nav>
@@ -67,21 +70,28 @@
         <h1><i class='fas fa-book-open' style='font-size:48px'>&nbsp;Library</i></h1>
     </div>
     
-    <div class="b" id="c">
+    <div class="b">
         <hr>
         <h4><img src="img_avatar.png">Repurpose content to reach a wider audience</h4>
         <hr>
         <h4><img src="avatar2.png">14 Usefull Sites For Designers</h4>
         <hr>
         <h4><img src="img_avatar3.png">Measuring Your Link Building with Google Analytics</h4>
-        <button class="btn">More&nbsp;<i class="fa fa-hand-o-down"></i></input>
+        <button class="btn" onclick="validate()">More&nbsp;<i class="fa fa-hand-o-down"></i></input>
         </tr>
     </div>
+    <div class="f" id="c">
+        <hr>
+        <h4><img src="1avatar.png">This is new avatar</h4>
+        <hr>
+        <h4><img src="owl avatar.png">OWL is here</h4>
+        <hr>
+        <h4><img src="male_avatar.png">I am the expert</h4>
+    <p id="e"></p>
     <script>
         function validate()
         {
-            var d=document.getElementById("c").innerHTML;
-            document.getElementById().innerHTML= d;
+            document.getElementById("c").style.display = "block";
         }
     </script>
     <footer>
