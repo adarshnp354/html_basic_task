@@ -21,15 +21,21 @@
         img{
             height: 10%;
             width: 10%;
+            padding-right: 20px;
+            margin-top: 20px;
         }
         div{
             text-align: center;
         }
         body{
-            background-color: brown;
+            background-color: gray;
         }
         .item{
             transition:.6s ease-in-out left;
+        }
+        .carousel-caption{
+            top: auto;
+            bottom: 10;
         }
     </style>
 </head>
@@ -37,14 +43,14 @@
     <header>
         <div class="col-sm">
         <h1>TRENDING <span>PRODUCTS</span></h1>
-        </div>ss
+        </div>
     </header>
-    <div id="cl" class="carousel slide" data-ride="carousel">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
     
     
         <ul class="carousel-indicators">
-          <li data-target="#cl" data-slide-to="0" class="active"></li>
-          <li data-target="#cl" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
           
         </ul>
         
@@ -78,11 +84,11 @@
         </div>
         
            
-        <a class="carousel-control-prev" href="#c1" role="button" data-slide="prev">
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
         </a>
-        <a class="carousel-control-next" href="#c1" role="button" data-slide="next">
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
       
