@@ -39,6 +39,14 @@
             color:red;
             display: inline;
         }
+        .col-md-3{
+            display: inline-block;
+            margin-left:-4px;
+        }
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon{
+            background-color:blue(201, 199, 199);
+        }
     </style>
 </head>
 <body>
@@ -47,20 +55,19 @@
         <h1>TRENDING <span>PRODUCTS</span></h1>
         </div>
     </header>
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
     
     
         <ul class="carousel-indicators">
           <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
           <li data-target="#myCarousel" data-slide-to="1"></li>
-          <li data-target="#myCarousel" data-slide-to="2"></li>
-          <li data-target="#myCarousel" data-slide-to="3"></li>
         </ul>
         
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
            
-           
-        <div class="carousel-inner">
+        <div class="container carousel-inner no-padding">
             <div class="carousel-item active">
+            <div class="col-xs-3 col-sm-3 col-md-3">
              <img src="ipad.jpg">
                     <div class="card-bottom">
                         <h3>Apple iPad</h3>
@@ -68,7 +75,7 @@
                         <input type="button" value="ADD TO CART">
                     </div>
             </div>
-            <div class="carousel-item">       
+            <div class="col-xs-3 col-sm-3 col-md-3">       
                 <img src="headphn.jpg">
                     <div class="card-bottom">
                         <h3>Sony Headphones</h3>
@@ -76,21 +83,24 @@
                         <input type="button" value="ADD TO CART">
                     </div>
             </div>
+            </div>
             <div class="carousel-item">
+                <div class="col-xs-3 col-sm-3 col-md-3">  
                 <img src="mac.jpg">
                     <div class="card-bottom">
                         <h3>Apple Mac</h3>
                         <p>Be the best version of yours</p>
                         <input type="button" value="ADD TO CART">
                     </div>
-            </div>
-            <div class="carousel-item">
+                </div>
+                <div class="col-xs-3 col-sm-3 col-md-3">
                 <img src="iphn.jpg">
                     <div class="card-bottom">
                         <h3>iPhone 7plus</h3>
                         <p>The new era of next generation</p>
                         <input type="button" value="ADD TO CART">
                     </div>
+                </div>
             </div>
         </div>
         
